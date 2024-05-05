@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Tabada-Activity 8</title>
+    </head>
+    
+    <body>
+        <header>
+            <!--banner for the countdown-->
+            <section class="banner">
+                <article>BIRTHDAY CELEBRATION in:</article>
+                <div id="countdown"></div>
+                
+            </section>
+            
+            <!--navigation bar-->
+            <nav>
+                <ul>
+                    <li><a href="#products">Images</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                </ul>
+            </nav>
+        </header> 
+ 
+        <main>
+            <!--carousel images-->>
+            <section id="products">
+                <h1>Places to Visit</h1>
+                <article>Click the left side for previous, right side for next, and center to zoom.</article>
+                <article>Hover on the center to see the title.</article>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="Basilica_image1.jpg" class="d-block w-100" alt="Basilica" title="Saint Peter's Basilica">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Petra_image2.jpg" class="d-block w-100" alt="Petra" title="City of Petra in Jordan">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Notredame_image3.jpg" class="d-block w-100" alt="Notre Dame" title="Notre Dame Cathedral">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Sagrada_image4.jpg" class="d-block w-100" alt="Sagrada Familia" title="Sagrada Familia in Barcelona">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </section>       
+            
+            <!--contact service thingy-->
+            <section id="contact">
+                <h1>Send your Birthday Wishes!</h1>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <small id="errorMessage"></small>
+
+                    <button type="button" id="submitButton">Submit</button>
+                </form>
+            </section>
+            
+            <!--for da popup modal thingy-->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="modalMessage"></p>
+                </div>
+            </div>
+        </main>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        <script src="banner.jsx"></script>
+        <script src="carousel.jsx"></script>
+        <script src="modal.jsx"></script>
+    </body>
+</html>
